@@ -1,3 +1,11 @@
+## functions
+## os.listdir() - list files in directory
+## os.mkdir() - make directory
+## os.popen() - run command in terminal
+## os.popen("cp file.txt folder/") - copy file to folder
+## os.rename() - rename file
+## os.path.join("folder/", "file.txt") - join paths, usually assigned to filename so it can be used in open()
+
 import os
 import time
 
