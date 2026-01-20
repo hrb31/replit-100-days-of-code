@@ -6,6 +6,10 @@ list = []
 with open('todo.txt', 'r') as f:
   list = eval(f.read())
 
+def save():
+  with open('todo.txt', 'w') as f:
+    f.write(str(list))
+
 def add():
   task = input("Enter task to be done: ")
   date = input("Enter date due by: ")
@@ -69,7 +73,10 @@ while True:
   else:
     print("Invalid choice.")
 
+  save()
+  
   again = input("Do you want to see the menu again or quit?: ")
+  
   if again.lower() == "quit":
     break
   else:
@@ -77,5 +84,4 @@ while True:
     os.system('clear')
     continue
 
-with open('todo.txt', 'w') as f:
-  f.write(str(list))
+  
